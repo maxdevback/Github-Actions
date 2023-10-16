@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Get repo
         uses: actions/checkout@v4
+      - name: Install node modules
+        run: npm ci
       - name: Lint
         run: npm run lint
