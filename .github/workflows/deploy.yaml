@@ -19,3 +19,17 @@ jobs:
         uses: ./.github/actions/cached-deps
       - name: test
         run: npm run test
+  build:
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    steps: 
+    - name Get repo
+      uses: actions/checkout@v4
+    - name: Install node modules
+      uses: ./.github/actions/cached-deps
+    - name: Get dist folder
+      uses: actions/upload-artifact@v3
+      with: 
+        name: dist-folder
+        path: dist
+
