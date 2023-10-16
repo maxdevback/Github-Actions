@@ -53,5 +53,3 @@ jobs:
           bucket: maxdevback-github-actions
           dist-folder: ./dist
           bucket-region: eu-north-1
-      - name: Output info
-        run: echo "URL: ${{ steps.deploy.outputs.website-url }}"
