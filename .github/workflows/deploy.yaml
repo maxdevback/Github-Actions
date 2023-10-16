@@ -10,7 +10,7 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-  test: 
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get repo
@@ -18,4 +18,4 @@ jobs:
       - name: Install node modules
         run: npm c
       - name: test
-        run npm run test
+        run: npm run test
