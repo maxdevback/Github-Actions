@@ -7,7 +7,7 @@ jobs:
       - name: Get repo
         uses: actions/checkout@v4
       - name: Install node modules
-        run: npm ci
+        uses: ./.github/actions/cached-deps
       - name: Lint
         run: npm run lint
   test:
@@ -16,6 +16,6 @@ jobs:
       - name: Get repo
         uses: actions/checkout@v4
       - name: Install node modules
-        run: npm ci
+        uses: ./.github/actions/cached-deps
       - name: test
         run: npm run test
